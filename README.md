@@ -1,5 +1,4 @@
 # bitcoin-exchange
-<hr>
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
