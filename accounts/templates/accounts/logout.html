@@ -1,0 +1,27 @@
+{% extends "accounts/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="mt-5">
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="card shadow-lg border-0 rounded-lg ">
+                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Logout</h3></div>
+                    <div class="card-body text-center"><a href="{% url 'login' %}">Login Again</a></div>
+                    <div class="card-footer text-center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
